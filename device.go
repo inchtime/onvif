@@ -82,11 +82,12 @@ type Device struct {
 }
 
 type DeviceParams struct {
-	Xaddr      string
-	Username   string
-	Password   string
-	DeviceId   string
-	HttpClient *http.Client
+	Xaddr           string
+	Username        string
+	Password        string
+	DeviceId        string
+	MetadataVersion string
+	HttpClient      *http.Client
 }
 
 // GetServices return available endpoints
@@ -125,12 +126,27 @@ func GetAvailableDevicesAtSpecificEthernetInterface(interfaceName string) ([]Dev
 		}
 
 		for _, matches := range doc.Root().FindElements("./Body/ProbeMatches/ProbeMatch") {
+
+			// XAddrs
 			addrEle := matches.FindElement("./XAddrs")
 			xaddr := strings.Split(strings.Split(addrEle.Text(), " ")[0], "/")[2]
+
+			// DeviceId
 			addressEle := matches.FindElement("./EndpointReference/Address")
-			deviceId := strings.Replace(addressEle.Text(), "urn:uuid:", "", 1)
+			var deviceId string
+			if addressEle != nil {
+				deviceId = strings.Replace(addressEle.Text(), "urn:uuid:", "", 1)
+			}
+
+			// MetadataVersion
+			verEle := matches.FindElement("./MetadataVersion")
+			var version string
+			if addressEle != nil {
+				version = verEle.Text()
+			}
+
 			if !nvtDevicesSeen[xaddr] {
-				dev, err := NewDevice(DeviceParams{Xaddr: strings.Split(xaddr, " ")[0], DeviceId: deviceId})
+				dev, err := NewDevice(DeviceParams{Xaddr: strings.Split(xaddr, " ")[0], DeviceId: deviceId, MetadataVersion: version})
 				if err != nil {
 					// TODO(jfsmig) print a warning
 				} else {
