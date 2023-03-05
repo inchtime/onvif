@@ -9,7 +9,7 @@ import (
 	"github.com/juju/errors"
 	"github.com/tichtime/onvif"
 	"github.com/tichtime/onvif/sdk"
-	"github.com/use-go/onvif/media"
+	"github.com/tichtime/onvif/media"
 )
 
 // Call_AddVideoAnalyticsConfiguration forwards the call to dev.CallMethod() then parses the payload of the reply as a AddVideoAnalyticsConfigurationResponse.

@@ -8,8 +8,8 @@ import (
 	"context"
 	"github.com/juju/errors"
 	"github.com/tichtime/onvif"
-	"github.com/use-go/onvif/sdk"
-	"github.com/use-go/onvif/media"
+	"github.com/tichtime/onvif/sdk"
+	"github.com/tichtime/onvif/media"
 )
 
 // Call_GetAudioEncoderConfigurationOptions forwards the call to dev.CallMethod() then parses the payload of the reply as a GetAudioEncoderConfigurationOptionsResponse.
