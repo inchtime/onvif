@@ -13,7 +13,7 @@ import (
 	"github.com/beevik/etree"
 	"github.com/tichtime/onvif"
 	"github.com/tichtime/onvif/device"
-	discover "github.com/use-go/onvif/ws-discovery"
+	discover "github.com/tichtime/onvif/ws-discovery"
 )
 
 func TestGetAvailableDevicesAtSpecificEthernetInterface(t *testing.T) {

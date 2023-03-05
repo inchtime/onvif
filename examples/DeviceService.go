@@ -7,9 +7,9 @@ import (
 	"net/http"
 
 	goonvif "github.com/tichtime/onvif"
-	"github.com/use-go/onvif/device"
-	sdk "github.com/use-go/onvif/sdk/device"
-	"github.com/use-go/onvif/xsd/onvif"
+	"github.com/tichtime/onvif/device"
+	sdk "github.com/tichtime/onvif/sdk/device"
+	"github.com/tichtime/onvif/xsd/onvif"
 )
 
 const (
@@ -60,7 +60,7 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	} else {
-		// You could use https://github.com/use-go/onvif/gosoap for pretty printing response
+		// You could use https://github.com/tichtime/onvif/gosoap for pretty printing response
 		fmt.Println(createUserResponse)
 	}
 
