@@ -7,7 +7,7 @@ package media
 import (
 	"context"
 	"github.com/juju/errors"
-	"github.com/tichtime/onvif"
+	"github.com/inchtime/onvif"
 	"github.com/inchtime/onvif/sdk"
 	"github.com/inchtime/onvif/media"
 )

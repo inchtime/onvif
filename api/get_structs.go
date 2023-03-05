@@ -3,9 +3,9 @@ package api
 import (
 	"errors"
 
-	"github.com/tichtime/onvif/device"
-	"github.com/tichtime/onvif/media"
-	"github.com/tichtime/onvif/ptz"
+	"github.com/inchtime/onvif/device"
+	"github.com/inchtime/onvif/media"
+	"github.com/inchtime/onvif/ptz"
 )
 
 func getPTZStructByName(name string) (interface{}, error) {

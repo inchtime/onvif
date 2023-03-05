@@ -11,7 +11,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/tichtime/onvif/xsd/iso8601"
+	"github.com/inchtime/onvif/xsd/iso8601"
 )
 
 /*

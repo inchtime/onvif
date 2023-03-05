@@ -7,9 +7,9 @@ package media
 import (
 	"context"
 	"github.com/juju/errors"
-	"github.com/tichtime/onvif"
-	"github.com/tichtime/onvif/sdk"
-	"github.com/tichtime/onvif/media"
+	"github.com/inchtime/onvif"
+	"github.com/inchtime/onvif/sdk"
+	"github.com/inchtime/onvif/media"
 )
 
 // Call_GetCompatibleVideoEncoderConfigurations forwards the call to dev.CallMethod() then parses the payload of the reply as a GetCompatibleVideoEncoderConfigurationsResponse.

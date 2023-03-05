@@ -1,8 +1,8 @@
 package imaging
 
 import (
-	"github.com/tichtime/onvif/xsd"
-	"github.com/tichtime/onvif/xsd/onvif"
+	"github.com/inchtime/onvif/xsd"
+	"github.com/inchtime/onvif/xsd/onvif"
 )
 
 type GetServiceCapabilities struct {

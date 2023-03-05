@@ -15,10 +15,10 @@ import (
 
 	"github.com/beevik/etree"
 	"github.com/gin-gonic/gin"
-	"github.com/tichtime/onvif"
-	"github.com/tichtime/onvif/gosoap"
-	"github.com/tichtime/onvif/networking"
-	wsdiscovery "github.com/tichtime/onvif/ws-discovery"
+	"github.com/inchtime/onvif"
+	"github.com/inchtime/onvif/gosoap"
+	"github.com/inchtime/onvif/networking"
+	wsdiscovery "github.com/inchtime/onvif/ws-discovery"
 )
 
 var (

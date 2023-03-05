@@ -1,7 +1,7 @@
 package event
 
 import (
-	"github.com/tichtime/onvif/xsd"
+	"github.com/inchtime/onvif/xsd"
 )
 
 // GetServiceCapabilities action
