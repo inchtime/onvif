@@ -11,8 +11,8 @@ import (
 	"testing"
 
 	"github.com/beevik/etree"
-	"github.com/use-go/onvif"
-	"github.com/use-go/onvif/device"
+	"github.com/tichtime/onvif"
+	"github.com/tichtime/onvif/device"
 	discover "github.com/use-go/onvif/ws-discovery"
 )
 

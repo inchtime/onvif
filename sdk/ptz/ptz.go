@@ -1,9 +1,9 @@
 package ptz
 
-//go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetServiceCapabilities
-//go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetNodes
-//go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetNode
-//go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetConfiguration
+//go:generate go run github.com/tichtime/onvif/sdk/codegen ptz ptz GetServiceCapabilities
+//go:generate go run github.com/tichtime/onvif/sdk/codegen ptz ptz GetNodes
+//go:generate go run github.com/tichtime/onvif/sdk/codegen ptz ptz GetNode
+//go:generate go run github.com/tichtime/onvif/sdk/codegen ptz ptz GetConfiguration
 //go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetConfigurations
 //go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz SetConfiguration
 //go:generate go run github.com/use-go/onvif/sdk/codegen ptz ptz GetConfigurationOptions

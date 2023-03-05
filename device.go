@@ -11,10 +11,10 @@ import (
 	"strings"
 
 	"github.com/beevik/etree"
-	"github.com/use-go/onvif/device"
-	"github.com/use-go/onvif/gosoap"
-	"github.com/use-go/onvif/networking"
-	wsdiscovery "github.com/use-go/onvif/ws-discovery"
+	"github.com/tichtime/onvif/device"
+	"github.com/tichtime/onvif/gosoap"
+	"github.com/tichtime/onvif/networking"
+	wsdiscovery "github.com/tichtime/onvif/ws-discovery"
 )
 
 // Xlmns XML Scheam

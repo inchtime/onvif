@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 
-	goonvif "github.com/use-go/onvif"
+	goonvif "github.com/tichtime/onvif"
 	"github.com/use-go/onvif/device"
 	sdk "github.com/use-go/onvif/sdk/device"
 	"github.com/use-go/onvif/xsd/onvif"
