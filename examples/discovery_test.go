@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 	"log"
+	"net"
 	"path"
 	"regexp"
 	"strings"
@@ -16,8 +17,21 @@ import (
 )
 
 func TestGetAvailableDevicesAtSpecificEthernetInterface(t *testing.T) {
-	s, err := onvif.GetAvailableDevicesAtSpecificEthernetInterface("en0")
-	log.Printf("%v %v", err, s)
+	l, err := net.Interfaces()
+	if err != nil {
+		panic(err)
+	}
+	var devices = make([]onvif.Device, 0)
+	for _, f := range l {
+		if f.Flags&net.FlagUp > 0 {
+			result, err := onvif.GetAvailableDevicesAtSpecificEthernetInterface(f.Name)
+			if err != nil {
+				panic(err)
+			}
+			devices = append(devices, result...)
+		}
+	}
+	log.Printf("output %+v", devices)
 }
 
 func client() {
