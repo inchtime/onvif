@@ -3,7 +3,7 @@ package onvif
 import (
 	"encoding/xml"
 	"errors"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"reflect"
@@ -95,13 +95,18 @@ func (dev *Device) GetServices() map[string]string {
 	return dev.endpoints
 }
 
-// GetServices return available endpoints
+// GetDeviceInfo return available endpoints
 func (dev *Device) GetDeviceInfo() DeviceInfo {
 	return dev.info
 }
 
+// GetDeviceParams return available endpoints
+func (dev *Device) GetDeviceParams() DeviceParams {
+	return dev.params
+}
+
 func readResponse(resp *http.Response) string {
-	b, err := ioutil.ReadAll(resp.Body)
+	b, err := io.ReadAll(resp.Body)
 	if err != nil {
 		panic(err)
 	}
@@ -164,7 +169,7 @@ func GetAvailableDevicesAtSpecificEthernetInterface(interfaceName string) ([]Dev
 func (dev *Device) getSupportedServices(resp *http.Response) {
 	doc := etree.NewDocument()
 
-	data, _ := ioutil.ReadAll(resp.Body)
+	data, _ := io.ReadAll(resp.Body)
 
 	if err := doc.ReadFromBytes(data); err != nil {
 		//log.Println(err.Error())
