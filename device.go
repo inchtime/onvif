@@ -140,7 +140,9 @@ func GetAvailableDevicesAtSpecificEthernetInterface(interfaceName string) ([]Dev
 			addressEle := matches.FindElement("./EndpointReference/Address")
 			var deviceId string
 			if addressEle != nil {
-				deviceId = strings.Replace(addressEle.Text(), "urn:uuid:", "", 1)
+				deviceId = addressEle.Text()
+				deviceId = strings.Replace(deviceId, "urn:", "", 1)
+				deviceId = strings.Replace(deviceId, "uuid:", "", 1)
 			}
 
 			// MetadataVersion
